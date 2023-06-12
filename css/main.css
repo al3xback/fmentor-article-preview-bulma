@@ -1,15 +1,4 @@
 @charset "UTF-8";
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  border: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-}
-
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,
@@ -10758,18 +10747,6 @@ ol {
   background-image: url("../images/icons/pinterest.svg");
 }
 
-@media (min-width: 60em) {
-  .card {
-    max-width: 55.3846153846em;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -moz-box-direction: normal;
-    -moz-box-orient: horizontal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
 .container {
   padding: 0 2em;
 }
