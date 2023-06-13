@@ -1,0 +1,157 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mix;
+
+.card {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+	width: 100%;
+	margin: func.em(40, var.$font-size-primary) 0
+		func.em(60, var.$font-size-primary);
+}
+
+.card-image {
+	@include mix.border-radius(8px 8px 0 0);
+}
+
+.card-image .image {
+	background-color: var.$color-desaturated-dark-blue;
+	@include mix.border-radius(inherit);
+}
+
+.card-image .image img {
+	object-fit: cover;
+}
+
+.card-content {
+	position: relative;
+}
+
+.author {
+	padding-right: func.em(45, var.$font-size-primary);
+}
+
+.image.is-40x40 {
+	height: 40px;
+	width: 40px;
+}
+
+.post-date {
+	color: var.$color-grayish-blue;
+}
+
+.box-share {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+	width: 100%;
+}
+
+.share-checkbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.box-share .level {
+	position: relative;
+	padding: func.em(24, var.$font-size-primary)
+		func.em(32, var.$font-size-primary);
+	background-color: transparent;
+	@include mix.transition(all 0.24s);
+}
+
+.box-share .level-left {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	gap: func.em(20, var.$font-size-primary);
+	padding: inherit;
+	padding-right: func.em(90, var.$font-size-primary);
+	visibility: hidden;
+}
+
+.share-text {
+	text-transform: uppercase;
+	color: var.$color-grayish-blue;
+	letter-spacing: func.em(3, var.$font-size-primary);
+}
+
+.btn--share-toggle {
+	position: relative;
+	z-index: 1;
+}
+
+.share-checkbox:checked + .level {
+	background-color: var.$color-dark-grayish-blue;
+}
+
+.share-checkbox:checked + .level .level-left {
+	visibility: visible;
+}
+
+.share-checkbox:checked + .level .level-right .btn--share-toggle {
+	background-color: var.$color-desaturated-dark-blue;
+	border-color: var.$color-desaturated-dark-blue;
+	color: var.$color-white;
+}
+
+@media (min-width: 48em) {
+	.card {
+		@include mix.flex-direction(row);
+	}
+
+	.card-image,
+	.card-content {
+		@include mix.flexbox;
+		@include mix.flex-direction(column);
+	}
+
+	.card-image {
+		@include mix.flex-shrink(0);
+		@include mix.flex-basis(func.em(280, var.$font-size-primary));
+		max-width: func.em(280, var.$font-size-primary);
+		@include mix.border-radius(8px 0 0 8px);
+	}
+
+	.card-image .image {
+		@include mix.flex(auto);
+		height: auto;
+		padding-bottom: 0;
+	}
+
+	.box-share .level-left {
+		top: auto;
+		bottom: func.em(80, var.$font-size-primary);
+		left: auto;
+		right: func.em(-76, var.$font-size-primary);
+		padding: func.em(16, var.$font-size-primary)
+			func.em(32, var.$font-size-primary);
+		background-color: var.$color-dark-grayish-blue;
+		@include mix.border-radius(10px);
+		@include mix.box-shadow(
+			0 func.em(8, var.$font-size-primary)
+				func.em(16, var.$font-size-primary) rgba(0, 0, 0, 0.16)
+		);
+	}
+
+	.box-share .level-left::before {
+		content: '';
+		position: absolute;
+		bottom: func.em(-7.5, var.$font-size-primary);
+		left: 50%;
+		width: func.em(15, var.$font-size-primary);
+		height: func.em(15, var.$font-size-primary);
+		background-color: inherit;
+		@include mix.transform(translateX(-50%) rotate(45deg));
+	}
+
+	.share-checkbox:checked + .level {
+		background-color: transparent;
+	}
+}

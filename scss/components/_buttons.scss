@@ -27,9 +27,3 @@
 	@include mix.box-shadow(none);
 	color: var.$color-desaturated-dark-blue;
 }
-
-.btn--link {
-	padding: 0;
-	@include mix.box-shadow(none);
-	color: var.$color-dark-grayish-blue;
-}
