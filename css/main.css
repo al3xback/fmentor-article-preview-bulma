@@ -337,7 +337,7 @@ body {
   color: hsl(214, 17%, 51%);
   font-size: 0.8125em;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.5384615385;
 }
 
 a {
@@ -10426,7 +10426,6 @@ h6 {
 
 p {
   font-size: 1em;
-  line-height: 1.5384615385;
 }
 
 strong {
