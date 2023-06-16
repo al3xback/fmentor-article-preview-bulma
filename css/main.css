@@ -10309,7 +10309,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   margin-bottom: 0;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 60em) {
   .card {
     max-width: 55.3846153846em;
   }
@@ -10664,7 +10664,7 @@ ol {
   color: hsl(0, 0%, 100%);
 }
 
-@media (min-width: 48em) {
+@media (min-width: 60em) {
   .card {
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;

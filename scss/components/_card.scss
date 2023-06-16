@@ -101,7 +101,7 @@
 	color: var.$color-white;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 60em) {
 	.card {
 		@include mix.flex-direction(row);
 	}

@@ -26,7 +26,7 @@
 	margin-bottom: 0;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 60em) {
 	.card {
 		max-width: func.em(720, var.$font-size-primary);
 	}
