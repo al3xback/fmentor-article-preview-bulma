@@ -113,9 +113,8 @@
 	}
 
 	.card-image {
-		@include mix.flex-shrink(0);
-		@include mix.flex-basis(func.em(280, var.$font-size-primary));
-		max-width: func.em(280, var.$font-size-primary);
+		@include mix.flex(none);
+		width: func.em(280, var.$font-size-primary);
 		@include mix.border-radius(8px 0 0 8px);
 	}
 

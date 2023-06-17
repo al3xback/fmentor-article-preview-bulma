@@ -10693,13 +10693,12 @@ ol {
     flex-direction: column;
   }
   .card-image {
-    -webkit-flex-shrink: 0;
-    -moz-flex-shrink: 0;
-    -ms-flex: 0;
-    flex-shrink: 0;
-    -webkit-flex-basis: 21.5384615385em;
-    flex-basis: 21.5384615385em;
-    max-width: 21.5384615385em;
+    -webkit-box-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    width: 21.5384615385em;
     -webkit-border-radius: 8px 0 0 8px;
     -moz-border-radius: 8px 0 0 8px;
     border-radius: 8px 0 0 8px;
