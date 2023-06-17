@@ -10313,6 +10313,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   .card {
     max-width: 55.3846153846em;
   }
+  .card-image .image,
+  .card-image .image img {
+    position: static;
+  }
   .title {
     font-size: 1.5384615385em;
   }
@@ -10707,7 +10711,7 @@ ol {
     -webkit-flex: auto;
     flex: auto;
     height: auto;
-    padding-bottom: 0;
+    padding-top: 0;
   }
   .box-share .level-left {
     top: auto;

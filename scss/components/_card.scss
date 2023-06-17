@@ -122,7 +122,7 @@
 	.card-image .image {
 		@include mix.flex(auto);
 		height: auto;
-		padding-bottom: 0;
+		padding-top: 0;
 	}
 
 	.box-share .level-left {

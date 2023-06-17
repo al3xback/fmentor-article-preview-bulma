@@ -31,6 +31,11 @@
 		max-width: func.em(720, var.$font-size-primary);
 	}
 
+	.card-image .image,
+	.card-image .image img {
+		position: static;
+	}
+
 	.title {
 		font-size: func.em(20, var.$font-size-primary);
 	}
