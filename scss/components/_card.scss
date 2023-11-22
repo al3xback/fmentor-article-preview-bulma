@@ -3,20 +3,20 @@
 @use '../abstracts/mixins' as mix;
 
 .card {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
 }
 
 .card-image {
-	@include mix.border-radius(8px 8px 0 0);
+	border-radius: 8px 8px 0 0;
 }
 
 .card-image .image {
 	background-color: var.$color-desaturated-dark-blue;
-	@include mix.border-radius(inherit);
+	border-radius: inherit;
 }
 
 .card-image .image img {
@@ -44,8 +44,8 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 }
 
@@ -61,7 +61,7 @@
 	padding: func.em(24, var.$font-size-primary)
 		func.em(32, var.$font-size-primary);
 	background-color: transparent;
-	@include mix.transition(all 0.24s);
+	transition: all 0.24s;
 }
 
 .box-share .level-left {
@@ -103,23 +103,23 @@
 
 @media (min-width: 60em) {
 	.card {
-		@include mix.flex-direction(row);
+		flex-direction: row;
 	}
 
 	.card-image,
 	.card-content {
-		@include mix.flexbox;
-		@include mix.flex-direction(column);
+		display: flex;
+		flex-direction: column;
 	}
 
 	.card-image {
-		@include mix.flex(none);
+		flex: none;
 		width: func.em(280, var.$font-size-primary);
-		@include mix.border-radius(8px 0 0 8px);
+		border-radius: 8px 0 0 8px;
 	}
 
 	.card-image .image {
-		@include mix.flex(auto);
+		flex: auto;
 		height: auto;
 		padding-top: 0;
 	}
@@ -132,11 +132,9 @@
 		padding: func.em(16, var.$font-size-primary)
 			func.em(32, var.$font-size-primary);
 		background-color: var.$color-dark-grayish-blue;
-		@include mix.border-radius(10px);
-		@include mix.box-shadow(
-			0 func.em(8, var.$font-size-primary)
-				func.em(16, var.$font-size-primary) rgba(0, 0, 0, 0.16)
-		);
+		border-radius: 10px;
+		box-shadow: 0 func.em(8, var.$font-size-primary)
+			func.em(16, var.$font-size-primary) rgba(0, 0, 0, 0.16);
 	}
 
 	.box-share .level-left::before {
@@ -147,7 +145,7 @@
 		width: func.em(15, var.$font-size-primary);
 		height: func.em(15, var.$font-size-primary);
 		background-color: inherit;
-		@include mix.transform(translateX(-50%) rotate(45deg));
+		transform: translateX(-50%) rotate(45deg);
 	}
 
 	.share-checkbox:checked + .level {
