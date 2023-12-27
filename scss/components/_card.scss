@@ -41,8 +41,8 @@
 
 .box-share {
 	position: absolute;
-	bottom: 0;
 	left: 0;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -66,8 +66,8 @@
 .box-share .level-left {
 	position: absolute;
 	top: 0;
-	bottom: 0;
 	left: 0;
+	bottom: 0;
 	right: 0;
 	gap: func.em(20, var.$font-size-primary);
 	padding: inherit;
@@ -125,22 +125,21 @@
 
 	.box-share .level-left {
 		top: auto;
-		bottom: func.em(80, var.$font-size-primary);
 		left: auto;
+		bottom: func.em(80, var.$font-size-primary);
 		right: func.em(-76, var.$font-size-primary);
 		padding: func.em(16, var.$font-size-primary)
 			func.em(32, var.$font-size-primary);
 		background-color: var.$color-dark-grayish-blue;
 		border-radius: 10px;
-		box-shadow: 0 func.em(8, var.$font-size-primary)
-			func.em(16, var.$font-size-primary) rgba(0, 0, 0, 0.16);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
 	}
 
 	.box-share .level-left::before {
 		content: '';
 		position: absolute;
-		bottom: func.em(-7.5, var.$font-size-primary);
 		left: 50%;
+		bottom: func.em(-7.5, var.$font-size-primary);
 		width: func.em(15, var.$font-size-primary);
 		height: func.em(15, var.$font-size-primary);
 		background-color: inherit;
